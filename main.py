@@ -20,8 +20,31 @@ def loadRecs(filename):
 
 
 #define catorgories
+def inputRecs():
+  num=1
+  list=[]
+  while True:
+    print("Enter employee",num," (leave first name blank when done)")
+    first=input("First name: ")
+    if len(first)<1:
+      break
+    last=input("Last name: ")
+    phone=input("Phone Number: ")
+    room=input("Room: ")
+    e=Employee(first,last,phone,room)
+    list.append(e)
+    
+  return list
+
 
 #print string
+def displayRecs(list):
+  for e in list:
+    print(e.DirString())
+
+EmpList=[]
+
+
 
 #prompt user for file
 def main():
